@@ -1,13 +1,13 @@
-print('Welcome to AskPython Quiz')
+print('Bienvenido a AskPython Quiz')
 answer=input('Are you ready to play the Quiz ? (yes/no) :')
 score=0
 total_questions=3
 
 if answer.lower()=='yes':
-    answer=input('Question 1: What is your Favourite programming language?')
+    answer=input('Question 1: What could be your Favourite programming language?')
     if answer.lower()=='python':
         score += 1
-        print('correct')
+        print('woow correct')
     else:
         print('Wrong Answer :(')
 
