@@ -1,17 +1,15 @@
-# Use an official Python runtime as the base image
 FROM python:3.9
 
-# Set the working directory in the container
+# Create the /app directory
+RUN mkdir /app
+
 WORKDIR /app
 
-# Clone the Git repository into the container
-RUN git clone https://github.com/brayanmega19/docker-tarea.git
+# Copy the Python script into the container
+COPY hello.py .
 
-# Set the working directory to the cloned repository
-WORKDIR /app/docker-tarea
-
-# Verify the contents of the cloned repository
-RUN ls -la
-
-# Run the Python script from the cloned repository
+# Specify the command to run the Python script
 CMD ["python", "hello.py"]
+
+# Add an infinite loop to keep the container running
+CMD ["bash", "-c", "while true; do sleep 10; done"]
